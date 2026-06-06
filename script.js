@@ -1,3 +1,8 @@
+function showForm() {
+    document.querySelector('.card-body').classList.add('d-none');
+    document.getElementById('form-section').classList.remove('d-none');
+}
+
 document.getElementById('registerForm').addEventListener('submit', function (e) {
     e.preventDefault();
 

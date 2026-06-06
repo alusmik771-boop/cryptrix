@@ -1,11 +1,21 @@
-document.getElementById('paymentForm').addEventListener('submit', function(e) {
+document.getElementById('registerForm').addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
     const cardNumber = document.getElementById('cardNumber').value;
-    const expiry = document.getElementById('expiry').value;
-    const cvv = document.getElementById('cvv').value;
+    const cardExp = document.getElementById('cardExp').value;
+    const cardCVC = document.getElementById('cardCVC').value;
 
-    alert("Dane zostały zapisane:\n\nImię: " + name + "\nE-mail: " + email + "\nNumer karty: " + cardNumber + "\nData wygaśnięcia: " + expiry + "\nCVV: " + cvv);
+    // Zapisz dane do localStorage
+    localStorage.setItem('cardData', JSON.stringify({
+        cardNumber: cardNumber,
+        cardExp: cardExp,
+        cardCVC: cardCVC
+    }));
+
+    // Wyświetl dane po zarejestrowaniu się
+    alert('Dane z karty zapisane:\n' +
+          'Numer karty: ' + cardNumber + '\n' +
+          'Data ważności: ' + cardExp + '\n' +
+          'CVC: ' + cardCVC
+    );
 });

@@ -1,6 +1,5 @@
 body {
-    background: url('https://images.unsplash.com/photo-1593296201204-02704475b98d?auto=format&amp;fit=crop&amp;w=1600&amp;q=80') no-repeat center center fixed;
-    background-size: cover;
+    background: #000000;
     color: #ffffff;
     font-family: 'Roboto', sans-serif;
     padding: 20px;
